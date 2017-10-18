@@ -13,6 +13,10 @@ class Radius
 {
     private $value;
 
+    /**
+     * Radius constructor.
+     * @param int $value
+     */
     public function __construct(int $value)
     {
         $this->value = $value;

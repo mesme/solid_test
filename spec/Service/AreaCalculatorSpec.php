@@ -11,6 +11,9 @@ use Prophecy\Argument;
 
 class AreaCalculatorSpec extends ObjectBehavior
 {
+    /**
+     *
+     */
     function let()
     {
         $shapesCollection = new ShapesCollection();
@@ -21,11 +24,17 @@ class AreaCalculatorSpec extends ObjectBehavior
         $this->beConstructedWith($shapesCollection);
     }
 
+    /**
+     *
+     */
     function it_is_initializable()
     {
         $this->shouldHaveType(AreaCalculator::class);
     }
 
+    /**
+     *
+     */
     function it_should_calculate_area_of_shapes_passed()
     {
         $this->calculate()->shouldBeEqualTo(1256.64);
