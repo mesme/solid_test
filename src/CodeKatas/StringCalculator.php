@@ -11,7 +11,7 @@ class StringCalculator
      */
     public function add($numbers)
     {
-        $numbers = explode(',', $numbers);
+        $numbers = preg_split('/\s*[,\\\n]\s*/', $numbers);
 
         $result = 0;
 

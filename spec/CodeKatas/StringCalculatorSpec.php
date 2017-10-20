@@ -56,8 +56,16 @@ class StringCalculatorSpec extends ObjectBehavior
     /**
      *
      */
-    function _it_ignores_any_number_greater_than_or_equal_to_1000()
+    function it_ignores_any_number_greater_than_or_equal_to_1000()
     {
         $this->add('2,2,1000')->shouldEqual(4);
+    }
+
+    /**
+     *
+     */
+    function it_allows_new_line_feed_or_comma_as_delimiters()
+    {
+        $this->add('1,2\n3')->shouldEqual(6);
     }
 }
