@@ -29,6 +29,8 @@ class RomanNumerals
     {
         $result = '';
 
+        if ($number == 0) throw new \InvalidArgumentException('Invalid Number Passed!');
+
         foreach (static::$lookup as $limit => $value)
         {
             while ($number >= $limit)
